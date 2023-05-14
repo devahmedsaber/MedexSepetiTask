@@ -1,0 +1,42 @@
+Hello Dear,
+
+I will explain some of the parts that I implemented during
+the implementation of the task.
+
+1- First i create a laravel plain project.
+2- I create a database migrations files for the tables (categories, brands, products).
+3- I create a model for every database table.
+4- Then i used a Repository Design Patern to handle the code.
+5- I made two interfaces for home repository and product repository.
+6- I made two repositories for home and product.
+7- I made two controllers for home and product.
+8- I registered the interfaces with repositories in (RepositoryServiceProvider) file.
+9- I made a class to handle the api's responses in (app/classes) directory.
+10- I made two Helpers.
+11- Helpers.php file is a helper to make an instance from my ResponseBuilder class.
+12- Upload.php file is a helper to upload an image.
+13- I created two api's for list products with filter (category_id).
+14- Second api is to store a product in the database.
+15- The product store method used my request (StoreProductRequest) to handle the validation.
+16- The (StoreProductRequest) is extend (ApiRequest) class not (FormRequest).
+17- I made (ApiRequest) class to handle the validation and transformerd the errors in a json response.
+18- The frontend is a page in (views/website/index.blade.php) is a home page.
+19- I made a frontend with (html, css, bootstrap, js) and owl carousel plugin.
+20- I make .htaccess in root folder to remove 'public' from project url.
+
+
+I have inserted the database file into the project folder with name (medex_task.sql).
+And also i have inserted the Api Collection file into the project folder.
+
+
+- To run the project after cloning:
+
+1- run 'composer install' in the terminal.
+2- create a database with (medex_task) name in phpmyadmin.
+3- import the (medex_task.sql) into the database you created.
+4- update the env file DB_DATABASE with (medex_task).
+5- go to http://localhost/MedexSepetiTask/
+6- import the api collection into postman.
+7- test the (index, store) api's of the product.
+
+Thank You.
