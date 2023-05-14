@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "c29c5ca0-ca05-4f07-ba5a-9d5338c13ba0",
+		"name": "Ahmed Saber - MedexSepeti Backend Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27286122"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local_url}}/api/products?category_id=2",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "category_id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category_id",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Test Product Z",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Test Product Z Description",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "2800",
+									"type": "text"
+								},
+								{
+									"key": "tag",
+									"value": "normal",
+									"description": "('normal', 'best_selling', 'most_viewed', 'just_arrived)",
+									"type": "text"
+								},
+								{
+									"key": "added_by",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "is_promoted",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "active",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/D:/desk/istockphoto-901630488-612x612.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_url}}/api/products",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "local_url",
+			"value": "http://localhost/MedexSepetiTask",
+			"type": "string"
+		}
+	]
+}

@@ -105,12 +105,24 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img class="d-block w-100" src="{{ asset('website_assets/images/slider/1.jpg') }}" alt="First slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4>First Slider</h4>
+                            <p>This is a paragraph for first slider.</p>
+                        </div>
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src="{{ asset('website_assets/images/slider/1.jpg') }}" alt="Second slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4>Second Slider</h4>
+                            <p>This is a paragraph for second slider.</p>
+                        </div>
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src="{{ asset('website_assets/images/slider/1.jpg') }}" alt="Third slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4>Third Slider</h4>
+                            <p>This is a paragraph for third slider.</p>
+                        </div>
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

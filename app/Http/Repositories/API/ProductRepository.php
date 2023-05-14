@@ -13,13 +13,16 @@ class ProductRepository implements ProductRepositoryInterface
 
     public function index(Request $request)
     {
-        $query = Product::where('status', self::ACTIVE_STATUS);
+        $query = Product::where('status', self::ACTIVE_STATUS)
+            ->join('users', 'products.added_by', '=', 'users.id');
 
         if (isset($request['category_id']) && !is_null($request['category_id'])){
             $query->where('category_id', $request['category_id']);
         }
 
-        $products = $query->get();
+        $products = $query->select('products.id', 'category_id', 'products.title', 'products.description', 'price', 'image',
+            'tag', 'users.name as added_by', 'total_views', 'is_promoted', 'products.status', 'products.created_at')
+            ->get();
 
         return $products;
     }
